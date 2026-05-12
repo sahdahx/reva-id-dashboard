@@ -217,7 +217,6 @@ elif nav == "Tentang Proyek":
         with cols[i % 3]:
             st.markdown(f"""
             <div class="info-card" style="margin-bottom:1rem;">
-                <div style="font-size:1.8rem;margin-bottom:0.5rem;">{icon}</div>
                 <h4>{title}</h4>
                 <p>{desc}</p>
             </div>
