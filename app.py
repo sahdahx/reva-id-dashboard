@@ -102,7 +102,7 @@ FEATURE_LABELS = {
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: BERANDA
 # ═══════════════════════════════════════════════════════════════════════════════
-if nav == "🏠  Beranda":
+if nav == "Beranda":
     st.markdown(hero_html(
         badge="Platform Analitik Statistik Nasional · 2024",
         title="Pemetaan Kerentanan Ekonomi",
@@ -256,7 +256,7 @@ elif nav == "Tentang Proyek":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: DATA & VARIABEL
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "📊  Data & Variabel":
+elif nav == "Data & Variabel":
     st.markdown(section_header("Dataset Analisis", "38 provinsi · 9 indikator sosial-ekonomi"), unsafe_allow_html=True)
 
     tab1, tab2, tab3, tab4 = st.tabs(["Tabel Data", "Deskripsi Variabel", "Distribusi", "Korelasi"])
@@ -314,7 +314,7 @@ elif nav == "📊  Data & Variabel":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: PREPROCESSING
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "🧹  Preprocessing":
+elif nav == "Preprocessing":
     st.markdown(section_header("Preprocessing Data", "Validasi, cleaning, dan standardisasi sebelum analisis"), unsafe_allow_html=True)
 
     tab1, tab2, tab3 = st.tabs(["Validasi Data", "Standardisasi", "Kode Preprocessing"])
@@ -387,7 +387,7 @@ Z = scaler.fit_transform(df[features])
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: PCA
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "🔬  Analisis PCA":
+elif nav == "Analisis PCA":
     from sklearn.preprocessing import StandardScaler
     from sklearn.decomposition import PCA
 
@@ -503,7 +503,7 @@ df['EVI'] = -df['PC1']
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: EVI
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "📈  Economic Vulnerability Index":
+elif nav == "Economic Vulnerability Index":
     st.markdown(section_header("Economic Vulnerability Index (EVI)", "Skor komposit kerentanan ekonomi berbasis PC1 — PCA"), unsafe_allow_html=True)
 
     # Formula
@@ -580,7 +580,7 @@ print(df_sorted[['Provinsi','EVI','cluster_label']].to_string())
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: CLUSTERING
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "🗂️  Clustering":
+elif nav == "Clustering":
     from sklearn.preprocessing import StandardScaler
     from sklearn.cluster import KMeans
     from sklearn.metrics import silhouette_score
@@ -686,7 +686,7 @@ df['cluster_label'] = df['cluster'].map(cluster_map)
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: PETA INTERAKTIF
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "🗺️  Peta Interaktif":
+elif nav == "Peta Interaktif":
     st.markdown(section_header("Peta Kerentanan Ekonomi Regional", "Visualisasi spasial EVI dan kategori cluster per provinsi"), unsafe_allow_html=True)
 
     import plotly.express as px
@@ -781,7 +781,7 @@ elif nav == "🗺️  Peta Interaktif":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: FORECASTING
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "🔭  Forecasting":
+elif nav == "Forecasting":
     st.markdown(section_header("Forecasting EVI", "Proyeksi kerentanan ekonomi berbasis tren historis"), unsafe_allow_html=True)
     st.markdown("""<div class="info-card" style="margin-bottom:1.5rem;">
         <h4>ℹ️ Catatan Metodologis</h4>
@@ -837,7 +837,7 @@ pred = result.forecast(steps=4)
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: REKOMENDASI KEBIJAKAN
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "📌  Rekomendasi Kebijakan":
+elif nav == "Rekomendasi Kebijakan":
     st.markdown(section_header("Rekomendasi Kebijakan", "Implikasi analisis untuk perencanaan pembangunan regional"), unsafe_allow_html=True)
 
     recs = {
@@ -903,7 +903,7 @@ elif nav == "📌  Rekomendasi Kebijakan":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE: AI INSIGHT
 # ═══════════════════════════════════════════════════════════════════════════════
-elif nav == "📊  AI Insight":
+elif nav == "AI Insight":
     st.markdown(section_header("Smart Province Insight", "Analisis otomatis berbasis profil data tiap provinsi"), unsafe_allow_html=True)
     st.markdown("""<div class="info-card" style="margin-bottom:1rem;">
         <p style="margin:0;font-size:0.88rem;color:#475569;">
