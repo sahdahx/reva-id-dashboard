@@ -213,7 +213,7 @@ elif nav == "Tentang Proyek":
         ("Dimensi Pasar Tenaga Kerja", "Diukur melalui tingkat pengangguran terbuka. Mencerminkan ketidakseimbangan antara penawaran dan permintaan tenaga kerja."),
         ("Indeks Komposit (EVI)", "Mengintegrasikan seluruh dimensi melalui PCA menjadi satu skor tunggal yang memungkinkan komparasi antar wilayah secara objektif."),
     ]
-    for i, (icon, title, desc) in enumerate(cards):
+    for i, (title, desc) in enumerate(cards):
         with cols[i % 3]:
             st.markdown(f"""
             <div class="info-card" style="margin-bottom:1rem;">
