@@ -1,6 +1,11 @@
 CUSTOM_CSS = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Force light mode */
+[data-testid="stAppViewContainer"],
+[data-testid="stApp"] {
+    color-scheme: light !important;
+}
 
 /* ─── ROOT ─────────────────────────────────────── */
 :root {
