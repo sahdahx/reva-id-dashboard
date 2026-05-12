@@ -127,10 +127,10 @@ if nav == "Beranda":
 
     st.markdown(f"""
     <div class="metric-grid">
-        {metric_card(n_prov, "Provinsi Dianalisis")}
-        {metric_card(n_feat, "Indikator Sosial-Ekonomi")}
-        {metric_card(n_clust, "Cluster / Kategori")}
-        {metric_card(f"{avg_evi:.2f}", "Rata-rata Skor EVI Nasional")}
+        {{metric_card("Provinsi Dianalisis", n_prov)}
+        {metric_card("Indikator Sosial-Ekonomi", n_feat)}
+        {metric_card("Cluster / Kategori", n_clust)}
+        {metric_card("Rata-rata Skor EVI Nasional", f"{avg_evi:.2f}")}
     </div>
     """, unsafe_allow_html=True)
 
